@@ -11,17 +11,17 @@ jobs:
         ref: ${{ github.head_ref }}
      - run:  touch actions 
      
-     - name: Commit files
-       run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add .
-        git commit -a -m "Add changes"
-     - name: Push changes
-       uses: ad-m/github-push-action@master
+     - name: Pushes test folder
+       uses: datalbry/copy_folder_to_another_repo_action@1.0.0
+       env:
+        API_TOKEN_GITHUB: ${{ secrets.ACTIONS_KEY }}
        with:
-        github_token: ${{ secrets.ACTIONS_KEY }}
-        branch: ${{ github.ref }}
+        source_folder: 'test_files'
+        destination_repo: 'dmnemec/release-test'
+        destination_folder: 'test-dir'
+        user_email: 'devin.nemec@gmail.com'
+        user_name: 'dmnemec'
+        commit_msg: '[GHA] Update the test files.'
    #  - name: push backgenerated report
   #     if: success() 
    #    run: |
