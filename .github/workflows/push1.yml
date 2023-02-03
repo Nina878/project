@@ -18,7 +18,7 @@ jobs:
        with:
         source_folder: 'test_files'
         destination_repo: 'nina878/project'
-        destination_folder: '.github'
+        destination_folder: 'main/.github'
         user_email: 'nina.natarajan@sony.com'
         user_name: 'nina878'
         commit_msg: 'push the test files.'
