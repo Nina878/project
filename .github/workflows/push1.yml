@@ -17,4 +17,4 @@ jobs:
           git config user.email nina.natarajan@sony.com
           git add .
           git commit -m "add generated report"
-          git push origin feat/mpwebapp/allure-report
+          git push origin main
