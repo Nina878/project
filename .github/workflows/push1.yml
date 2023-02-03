@@ -20,7 +20,7 @@ jobs:
      - name: Push changes
        uses: ad-m/github-push-action@master
        with:
-        github_token: ${{ secrets.ACTIONS_key }}
+        github_token: ${{ secrets.ACTIONS_KEY }}
         branch: ${{ github.ref }}
    #  - name: push backgenerated report
   #     if: success() 
