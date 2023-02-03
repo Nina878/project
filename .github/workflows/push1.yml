@@ -1,0 +1,20 @@
+name: push folder
+on:
+  push:
+  
+jobs:
+ push_repo:
+   runs-on: [self-hosted, Linux, X64, VRT-TEST-CASE]
+   steps:
+     - uses: actions/checkout@v2
+       with:
+        ref: ${{ github.head_ref }}
+     - run:  touch actions 
+     - name: push backgenerated report
+       if: success() 
+       run: |
+          git config user.name nina878
+          git config user.email nina.natarajan@sony.com
+          git add .
+          git commit -m "add generated report"
+          git push origin feat/mpwebapp/allure-report
