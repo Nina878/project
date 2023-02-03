@@ -18,7 +18,7 @@ jobs:
        with:
         source_folder: 'test_files'
         destination_repo: 'nina878/project'
-        destination_branch_create: 'main'
+        destination_branch: 'main'
         destination_folder: '.github'
         
         user_email: 'nina.natarajan@sony.com'
