@@ -10,11 +10,15 @@ jobs:
        with:
         ref: ${{ github.head_ref }}
      - run:  touch actions 
-     - name: push backgenerated report
-       if: success() 
-       run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "add generated report"
-          git push 
+     
+     - uses: stefanzweifel/git-auto-commit-action@v4
+       with:
+        commit_message: Apply php-cs-fixer changes
+   #  - name: push backgenerated report
+  #     if: success() 
+   #    run: |
+   #       git config user.name github-actions
+    #      git config user.email github-actions@github.com
+   #       git add .
+   #       git commit -m "add generated report"
+    #      git push 
