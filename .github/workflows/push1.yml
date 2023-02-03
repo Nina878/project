@@ -11,9 +11,11 @@ jobs:
         ref: ${{ github.head_ref }}
      - run:  touch actions 
      
-     - uses: stefanzweifel/git-auto-commit-action@v4
+     - name: Push changes
+       uses: ad-m/github-push-action@master
        with:
-        commit_message: Apply php-cs-fixer changes
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
    #  - name: push backgenerated report
   #     if: success() 
    #    run: |
