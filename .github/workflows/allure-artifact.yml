@@ -12,7 +12,6 @@ jobs:
        with:
         name: my-artifact-allure
         path: |
-         /home/ubunu/vrt/ss-gcs-mp-webfe/allure-report
-         /home/ubunu/vrt/ss-gcs-mp-webfe/allure-results
-    
+         C:\Users\7000032878\Downloads\allure-repot
+         C:\Users\7000032878\Downloads\allure-results
   
