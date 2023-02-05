@@ -12,6 +12,6 @@ jobs:
        with:
         name: my-artifact-allure
         path: |
-         C:\Users\7000032878\Downloads\allure-repot
-         C:\Users\7000032878\Downloads\allure-results
+          /C:\Users\7000032878\Downloads\allure-repot
+          /C:\Users\7000032878\Downloads\allure-results
   
